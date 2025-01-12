@@ -1,0 +1,97 @@
+/* variables.css */
+
+/* Couleurs principales */
+:root {
+    --primary-color: #007BFF; /* Bleu vif */
+    --secondary-color: #6C757D; /* Gris */
+    --accent-color: #FFC107; /* Jaune */
+    --background-color: #dfe4e9; /* Fond clair */
+    --text-color: #212529; /* Noir-gris pour le texte */
+    --text-light: #FFFFFF; /* Texte clair */
+    --text-muted: #6C757D; /* Texte atténué */
+    --border-color: #DEE2E6; /* Bordures claires */
+    --error-color: #DC3545; /* Rouge pour erreurs */
+    --success-color: #28A745; /* Vert succès */
+    --info-color: #17A2B8; /* Bleu turquoise */
+    --warning-color: #FFC107; /* Jaune alerte */
+  
+    /* Couleurs supplémentaires */
+    --purple-color: #6F42C1; /* Violet */
+    --pink-color: #E83E8C; /* Rose */
+    --orange-color: #FD7E14; /* Orange */
+    --teal-color: #20C997; /* Vert menthe */
+    --dark-color: #343A40; /* Noir foncé */
+  
+    /* Dégradés (gradients) */
+    --gradient-primary: linear-gradient(135deg, #007BFF, #6610F2); /* Bleu -> Violet */
+    --gradient-accent: linear-gradient(135deg, #FFC107, #FD7E14); /* Jaune -> Orange */
+    --gradient-success: linear-gradient(135deg, #28A745, #20C997); /* Vert -> Teal */
+    --gradient-error: linear-gradient(135deg, #DC3545, #E83E8C); /* Rouge -> Rose */
+    --gradient-info: linear-gradient(135deg, #17A2B8, #6F42C1); /* Bleu turquoise -> Violet */
+    --gradient-dark: linear-gradient(135deg, #343A40, #000000); /* Noir foncé -> Noir */
+  
+    /* Couleurs pastel */
+    --pastel-blue: #A7C7E7;
+    --pastel-green: #B2D8B0;
+    --pastel-pink: #F6C5D8;
+    --pastel-yellow: #FAE3B4;
+    --pastel-purple: #D7BDE2;
+  }
+  
+  /* Typographie */
+  :root {
+    --font-family: 'Arial, sans-serif'; /* Police par défaut */
+    --heading-font-family: 'Poppins, sans-serif'; /* Police pour les titres */
+    --base-font-size: 16px; /* Taille de police par défaut */
+    --line-height: 1.5; /* Hauteur de ligne */
+    --heading-line-height: 1.2; /* Hauteur de ligne pour les titres */
+  }
+  
+  /* Espacement */
+  :root {
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+  }
+  
+  /* Bordures et rayons */
+  :root {
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-width: 1px;
+  }
+  
+  /* Ombres */
+  :root {
+    --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    --shadow-colored: 0px 4px 12px rgba(0, 123, 255, 0.3); /* Ombre bleue */
+  }
+  
+  /* Transitions */
+  :root {
+    --transition-duration: 0.3s ease;
+    --transition-ease: ease-in-out;
+  }
+  
+  /* Largeurs et hauteurs */
+  :root {
+    --max-width: 1200px;
+    --container-padding: 16px;
+  }
+  
+  /* fonts */
+  
+  @font-face {
+    font-family: 'DMSerifText-Regular';
+    src: url('../fonts/DMSerifText-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat.ttf') format('truetype');
+  }

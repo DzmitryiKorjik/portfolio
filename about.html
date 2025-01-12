@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Mon Portfolio</title>
+  </head>
+  <body>
+    <header id="about">
+      <nav id="nav">
+        <img id="menu-toggle" src="./assets/icons/menu.svg" alt="Menu burger" />
+        <ul class="menu hidden">
+          <li class="menu-item"><a href="./index.html">Accueil</a></li>
+          <li class="menu-item"><a href="./about.html">A propos de moi</a></li>
+          <li class="menu-item"><a href="./projets.html">Projets</a></li>
+          <li class="menu-item"><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="about__section container">
+        <div class="about__items">
+          <h1 class="about__items-title">A propos de moi</h1>
+        </div>
+        <div class="about__items-img">
+          <img src="./assets/img/about.JPG" alt="mon image" />
+        </div>
+        <h2 class="about__items-title">Dzmitryï MARDOVITCH</h2>
+        <p class="about__items-descr">Développeur Web</p>
+        <p class="about__items-text">
+          Bonjour et bienvenue dans mon portfolio ! Je m'appelle Dzmitryï et
+          je suis un développeur web passionné par la création de solutions
+          innovantes. Bien que je débute dans ce domaine, je compense mon manque
+          d'expérience professionnelle par une solide base de connaissances
+          acquise grâce à une formation rigoureuse et à des projets personnels
+          réussis.
+        </p>
+        <p class="about__items-text mb">
+          Je crois fermement que chaque défi est une opportunité de
+          croissance, et je suis prêt à donner le meilleur de moi-même pour
+          relever vos défis. Explorez mes projets, découvrez mes compétences.
+          Construisons ensemble l'avenir de l'internet !
+        </p>
+        <div class="about__items-download">
+          <a href="./assets/docs/CV_Dzmitryi_MARDOVITCH.pdf" download>
+            <button type="button">Télécharger le CV</button>
+          </a>
+        </div>
+      </section>
+      <section class="container">
+        <div class="skills__compt">
+          <div class="skills__items">
+            <h2 class="skills__items-title">Compétences en programmation</h2>
+            <ul>
+              <li>Développement frontend</li>
+              <li>
+                Excellente gestion du temps, respect scrupuleux des délais
+              </li>
+              <li>Communication</li>
+              <li>Compétences organisationnelles</li>
+              <li>Travail d'équipe</li>
+              <li>Capacité d'auto-organisation</li>
+              <li>Adaptabilité et aptitude à l'apprentissage</li>
+              <li>Méthode Agile</li>
+              <li>Langage de modélisation unifié (UML)</li>
+            </ul>
+          </div>
+          <div class="skills__items">
+            <h2 class="skills__items-title">Compétences linguistiques</h2>
+            <ul class="skills__items-lang">
+                <li class="skills__items-lang-items">
+                  <span class="label">Français:</span>
+                  <progress class="custom-progress" value="80" max="100"></progress>
+                  <span class="description">Courant</span>
+                </li>
+                <li class="skills__items-lang-items">
+                  <span class="label">Anglais:</span>
+                  <progress class="custom-progress" value="60" max="100"></progress>
+                  <span class="description">Conversation</span>
+                </li>
+                <li class="skills__items-lang-items">
+                  <span class="label">Russe:</span>
+                  <progress class="custom-progress" value="100" max="100"></progress>
+                  <span class="description">Langue maternelle</span>
+                </li>
+              </ul>
+              
+          </div>
+        </div>
+        <div class="skills__conn">
+          <div class="skills__items">
+            <h2 class="skills__items-title">Connaissances</h2>
+            <ul>
+              <li>Bootstrap</li>
+              <li>React, jQuery</li>
+              <li>Stylus, Sass, Less</li>
+              <li>Gulp, Webpack</li>
+              <li>WordPress</li>
+            </ul>
+          </div>
+          <div class="skills__items">
+            <h2 class="skills__items-title">Intérêts</h2>
+            <ul>
+              <li>Travailler avec HTML, CSS et JavaScript.</li>
+              <li>
+                Développement d'interfaces adaptatives et multi-navigateurs
+              </li>
+              <li>Optimisation des performances de l'interface utilisateur</li>
+              <li>Développement d'applications web complètes</li>
+              <li>
+                Intégration de systèmes de gestion de contenu (CMS) : WordPress
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

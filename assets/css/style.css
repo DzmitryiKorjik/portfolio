@@ -1,0 +1,98 @@
+@import url('./variable.css');
+@import url('./custom.css');
+@import url('./media.css');
+
+@import url('./about.css');
+@import url('./contact.css');
+
+#menu-toggle {
+    display: none;
+}
+
+header {
+    margin: 35px 0;
+    nav {
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 30px;
+            li {
+                a {
+                    font-family: 'DMSerifText-Regular';
+                    font-size: 1.5em;
+                    color: var(--dark-color);
+                    text-decoration: none;
+                    transition: var(--transition-duration);
+                    &:hover {
+                        color: var(--dark-color);
+                        box-shadow: var(--shadow-lg);
+                        padding: 5px;
+                        border: none;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+
+    } 
+}
+
+.container {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: 0 10px;
+}
+
+@keyframes floating-border {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+    .about__img {
+        margin-right: 45px;
+        img {
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+            border-radius: 50%;
+            animation: floating-border 8s ease-in-out infinite 1s;
+            box-shadow: var(--shadow-lg);
+        }
+    }
+    .about__items {
+        .about__items-title {
+            font-family: 'DMSerifText-Regular';
+            font-size: 55px;
+            font-weight: 800;
+            text-transform: none;
+            margin-bottom: 45px;
+        }
+        .about__items-descr {
+            font-family: "Montserrat";
+            font-weight: 500;
+            max-width: 450px;
+            margin-bottom: 45px;
+            color: var(--text-muted);
+        }
+        .about__items-social {
+            margin-bottom: 45px;
+            a {
+                margin-right: 15px;
+            }
+            
+        }
+    }
+}
