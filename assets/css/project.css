@@ -160,8 +160,8 @@ p + p {
     transform: none; 
   }
 
-  .card-info {
+  /* .card-info {
     transform: translateY(0);
-  }
+  } */
 }
 
