@@ -69,13 +69,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.querySelector('.contact-form').addEventListener('submit', function (e) {
-  e.preventDefault();  // Останавливаем стандартную отправку формы
+  e.preventDefault();
 
-  const formData = new FormData(this);  // Сбор данных формы
+  const formData = new FormData(this);
 
-  fetch('../api/sendEmail', {
+  fetch('/api/sendEmail', {
     method: 'POST',
-    body: formData,  // Отправляем данные формы
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    }),
   })
     .then(response => response.json())
     .then(data => {
