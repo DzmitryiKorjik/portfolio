@@ -19,7 +19,6 @@ Voici les principales technologies utilisées pour le développement de ce site 
 - **HTML5** : Structure des pages web.
 - **CSS3** : Mise en forme et design.
 - **JavaScript** : Comportement dynamique et interactivité.
-- **[Autres bibliothèques ou frameworks]** : [Description de leur utilisation].
 
 ## Installation et démarrage
 
@@ -40,6 +39,6 @@ Pour exécuter ce projet en local, suivez ces étapes :
 
 - **Si vous avez des questions ou des propositions, vous pouvez me contacter de la manière suivante :**
 
-**Email :** dmardovitch@gmail.com
-**LinkedIn :** [Votre profil LinkedIn](https://www.linkedin.com/in/dzmitryi-mardovitch/)
-**GitHub :** [Votre profil GitHub](https://github.com/DzmitryiKorjik)
+- **Email :** dmardovitch@gmail.com
+- **LinkedIn :** [Votre profil LinkedIn](https://www.linkedin.com/in/dzmitryi-mardovitch/)
+- **GitHub :** [Votre profil GitHub](https://github.com/DzmitryiKorjik)
