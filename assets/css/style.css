@@ -26,6 +26,7 @@ header {
                     color: var(--dark-color);
                     text-decoration: none;
                     transition: var(--transition-duration);
+                    background-color: var(--background-color);
                     &:hover {
                         color: var(--dark-color);
                         box-shadow: var(--shadow-lg);
