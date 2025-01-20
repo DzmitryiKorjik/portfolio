@@ -68,32 +68,35 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Sélectionne le formulaire avec la classe "contact-form" et ajoute un gestionnaire d'événement "submit"
 document.querySelector('.contact-form').addEventListener('submit', function (e) {
-  e.preventDefault();
+  e.preventDefault(); // Empêche le comportement par défaut du formulaire (rechargement de la page)
 
-  const formData = new FormData(this);
+  const formData = new FormData(this); // Récupère les données saisies dans le formulaire
 
+  // Envoie une requête POST à l'API '/api/sendEmail'
   fetch('/api/sendEmail', {
-    method: 'POST',
+    method: 'POST', // Méthode HTTP utilisée pour envoyer les données
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json', // Indique que les données envoyées sont au format JSON
     },
     body: JSON.stringify({
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message'),
+      name: formData.get('name'), // Récupère la valeur du champ "name" du formulaire
+      email: formData.get('email'), // Récupère la valeur du champ "email" du formulaire
+      message: formData.get('message'), // Récupère la valeur du champ "message" du formulaire
     }),
   })
-    .then(response => response.json())
+    .then(response => response.json()) // Convertit la réponse en JSON
     .then(data => {
+      // Vérifie si le message a été envoyé avec succès
       if (data.message === 'Le message a été envoyé avec succès !') {
-        alert('Votre message a été envoyé avec succès!');
+        alert('Votre message a été envoyé avec succès!'); // Affiche une alerte de succès
       } else {
-        alert('Erreur lors de l\'envoi du message.');
+        alert('Erreur lors de l\'envoi du message.'); // Affiche une alerte d'erreur
       }
     })
     .catch(error => {
-      alert('Erreur lors de l\'envoi du message.');
+      alert('Erreur lors de l\'envoi du message.'); // Affiche une alerte en cas d'erreur lors de la requête
     });
 });
 
