@@ -155,12 +155,4 @@ p + p {
   }
 }
 
-@media (max-width: 768px) {
-  .card-wrap {
-    transform: none; 
-  }
-  .card-info {
-    transform: translateY(0);
-  }
-}
 
