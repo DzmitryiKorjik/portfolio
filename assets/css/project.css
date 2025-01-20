@@ -136,12 +136,16 @@ p + p {
 
 .card-info h1 {
   font-family: "Montserrat";
+  line-height: 1;
   font-size: 36px;
   font-weight: 700;
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
 
-.card-info a {
+.card-info .github-link {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
   color: #fff;
   text-decoration: none;
   &:hover {
