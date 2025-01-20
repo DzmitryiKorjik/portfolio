@@ -1,31 +1,45 @@
-# Bienvenue sur mon portfolio "Deqeloppeur Web"
+# Portfolio Personnel
 
-## Description
+Bienvenue sur mon site portfolio personnel. Vous y trouverez des informations sur moi, mes compétences, mes projets et mes coordonnées pour me contacter.
 
-Bonjour ! Je suis Dzmitryï, un développeur web passionné par la création de sites modernes, interactifs et performants. Ce portfolio présente mes compétences, mes projets, et mon parcours.
+## À propos du site
 
-### Objectif du portfolio
+Ce site a été créé pour présenter mes compétences professionnelles et mes projets. Il comprend les sections suivantes :
 
-Ce site a été conçu pour :
-- Mettre en valeur mes compétences en développement web.
-- Montrer des projets que j’ai réalisés, qu’ils soient personnels ou professionnels.
-- Donner un aperçu de mon expérience et de mes centres d'intérêt en matière de programmation.
+- **Accueil** : Présentation générale et bienvenue.
+- **À propos de moi** : Informations détaillées sur mon parcours professionnel et mes expériences.
+- **Compétences** : Liste de mes compétences techniques et professionnelles.
+- **Projets** : Description de mes projets réalisés avec des liens vers les dépôts ou des démonstrations en ligne.
+- **Contact** : Moyens de me contacter.
 
-## Compétences techniques
+## Technologies
 
-Voici un aperçu des technologies que je maîtrise :
-- Frontend : HTML5, CSS3, JavaScript (ES6+), React
-- Base de données : MySQL
-- Outils & autres : Git, Webpack, API REST, Responsive Design
+Voici les principales technologies utilisées pour le développement de ce site :
 
-## Projets
+- **HTML5** : Structure des pages web.
+- **CSS3** : Mise en forme et design.
+- **JavaScript** : Comportement dynamique et interactivité.
+- **[Autres bibliothèques ou frameworks]** : [Description de leur utilisation].
 
-- 
-- 
-- 
-- 
+## Installation et démarrage
 
-## Auteur
+Pour exécuter ce projet en local, suivez ces étapes :
 
-- **Nom :** Mardovitch Dzmitryi
+1. Clonez le dépôt :
 
+   ```bash
+   git clone https://github.com/DzmitryiKorjik/portfolio.git
+    ```
+2. Allez dans le répertoire du projet :
+
+    ```bash
+    cd portfolio    
+    ```
+
+### Contact
+
+- **Si vous avez des questions ou des propositions, vous pouvez me contacter de la manière suivante :**
+
+**Email :** dmardovitch@gmail.com
+**LinkedIn :** [Votre profil LinkedIn](https://www.linkedin.com/in/dzmitryi-mardovitch/)
+**GitHub :** [Votre profil GitHub](https://github.com/DzmitryiKorjik)
