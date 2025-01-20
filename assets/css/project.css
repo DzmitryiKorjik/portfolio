@@ -36,6 +36,7 @@ p + p {
   transform: perspective(800px);
   transform-style: preserve-3d;
   cursor: pointer;
+  position: relative;
 }
 
 .card-wrap:hover .card-info {
@@ -111,7 +112,7 @@ p + p {
 }
 
 .card-info * {
-  position: relative;
+  /* position: relative; */
   z-index: 1;
 }
 
@@ -153,3 +154,14 @@ p + p {
     text-decoration: underline;
   }
 }
+
+/* @media (max-width: 768px) {
+  .card-wrap {
+    transform: none; 
+  }
+
+  .card-info {
+    transform: translateY(0);
+  }
+} */
+
