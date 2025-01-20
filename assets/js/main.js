@@ -66,3 +66,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+document.querySelector('.contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();  // Останавливаем стандартную отправку формы
+
+  const formData = new FormData(this);  // Сбор данных формы
+
+  fetch('../api/sendEmail', {
+    method: 'POST',
+    body: formData,  // Отправляем данные формы
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.message === 'Le message a été envoyé avec succès !') {
+        alert('Votre message a été envoyé avec succès!');
+      } else {
+        alert('Erreur lors de l\'envoi du message.');
+      }
+    })
+    .catch(error => {
+      alert('Erreur lors de l\'envoi du message.');
+    });
+});
+
