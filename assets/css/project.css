@@ -155,7 +155,7 @@ p + p {
   }
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .card-wrap {
     transform: none; 
   }
@@ -163,5 +163,5 @@ p + p {
   .card-info {
     transform: translateY(0);
   }
-} */
+}
 
