@@ -7,8 +7,8 @@ export default async function handler(req, res) {
         // Nodemailer
         const transporter = nodemailer.createTransport({
             host: "smtp.yandex.com", // SMTP-server
-            port: '465', // SSL port
-            secure: true, 
+            port: '587', // port
+            secure: false, 
             auth: {
                 user: process.env.EMAIL_USER, // email
                 pass: process.env.EMAIL_PASS, // password
