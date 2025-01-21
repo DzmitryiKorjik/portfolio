@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Sélectionne le formulaire avec la classe "contact-form" et ajoute un gestionnaire d'événement "submit"
-document.querySelector('.contact-form').addEventListener('submit', async (e) => {
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = {
       name: e.target.name.value,
@@ -76,16 +76,24 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
       message: e.target.message.value,
   };
 
-  const response = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-  });
+  try {
+      const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+      });
 
-  if (response.ok) {
-      alert('Le message a été envoyé avec succès !');
-  } else {
-      alert(`Erreur lors de l'envoi du message.`);
+      if (response.ok) {
+          alert('Сообщение отправлено!');
+      } else {
+          const errorData = await response.json();
+          console.error(errorData);
+          alert('Ошибка при отправке сообщения.');
+      }
+  } catch (error) {
+      console.error('Ошибка сети:', error);
+      alert('Ошибка при отправке сообщения.');
   }
 });
+
 

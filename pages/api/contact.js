@@ -7,12 +7,14 @@ export default async function handler(req, res) {
         // Nodemailer
         const transporter = nodemailer.createTransport({
             host: "smtp.yandex.com", // SMTP-server
-            port: 587,
-            secure: false,
+            port: '465', // SSL port
+            secure: true, 
             auth: {
                 user: process.env.EMAIL_USER, // email
                 pass: process.env.EMAIL_PASS, // password
             },
+            debug: true, // Включает отладочный режим
+            logger: true, // Логирует SMTP-соединение
         });
 
         try {
