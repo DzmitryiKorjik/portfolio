@@ -35,9 +35,9 @@ export default async function handler(req, res) {
 
         // Configuration de Nodemailer pour utiliser le serveur SMTP de Yandex
         const transporter = nodemailer.createTransport({
-            host: 'smtp.yandex.com', // Serveur SMTP
-            port: 587, // Port pour le protocole TLS
-            secure: false, // `false` pour le port 587, `true` pour le port 465
+            host: 'smtp.gmail.com', // SMTP-server Gmail
+            port: 587, // 465 Port TLS
+            secure: false, // true
             auth: {
                 user: process.env.EMAIL_USER, // Nom d'utilisateur (provenant des variables d'environnement)
                 pass: process.env.EMAIL_PASS, // Mot de passe (provenant des variables d'environnement)
