@@ -1,48 +1,42 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-const cors = require('cors');
-require('dotenv').config();
+import nodemailer from 'nodemailer';
 
-const app = express();
-const port = process.env.PORT || 3000;
+export default async function handler(req, res) {
+    if (req.method === 'POST') {
+        const { name, email, message } = req.body;
 
-// Middleware
-app.use(cors()); // Для разрешения CORS (если фронтенд и бэкенд на разных портах)
-app.use(bodyParser.json()); // Для обработки JSON в теле запросов
+        // Vérifier les données du formulaire
+        console.log('Form data received:', req.body);
 
-// Настройка маршрута для отправки сообщения
-app.post('/api/contact', async (req, res) => {
-    const { name, email, message } = req.body;
-
-    // Настройка транспортира Nodemailer
-    const transporter = nodemailer.createTransport({
-        host: 'smtp.yandex.com', // Параметры для Yandex SMTP
-        port: 587,
-        secure: false,
-        auth: {
-            user: process.env.EMAIL_USER, // Вставь свой email
-            pass: process.env.EMAIL_PASS, // Вставь свой пароль
-        },
-    });
-
-    try {
-        // Отправка email
-        await transporter.sendMail({
-            from: `"${name}" <${email}>`,
-            to: 'dmardovitch@gmail.com', // Твой email, на который будут приходить сообщения
-            subject: 'Новый запрос с сайта',
-            text: message,
+        // Nodemailer configuration
+        const transporter = nodemailer.createTransport({
+            host: 'smtp.yandex.com',
+            port: 587,
+            secure: false,
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            },
         });
 
-        res.status(200).json({ message: 'Сообщение отправлено успешно!' });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Ошибка при отправке сообщения' });
-    }
-});
+        try {
+            // Envoi de l'email
+            await transporter.sendMail({
+                from: `"${name}" <${email}>`,
+                to: 'dmardovitch@gmail.com',
+                subject: 'Nouveau message du site',
+                text: message,
+            });
 
-// Запуск сервера
-app.listen(port, () => {
-    console.log(`Сервер работает на порту ${port}`);
-});
+            // Vérifier si le message a bien été envoyé
+            console.log('Message sent successfully');
+            res.status(200).json({ message: 'Message envoyé avec succès!' });
+        } catch (error) {
+            console.error('Error during sending message:', error);
+            res.status(500).json({
+                error: "Erreur lors de l'envoi du message",
+            });
+        }
+    } else {
+        res.status(405).json({ error: 'Méthode non autorisée' });
+    }
+}

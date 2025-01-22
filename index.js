@@ -1,8 +1,8 @@
-// Sélectionne le formulaire avec l'ID "contact-form" et ajoute un gestionnaire d'événement "submit"
 document
     .getElementById('contact-form')
     .addEventListener('submit', async (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Empêcher le rechargement de la page
+
         const formData = {
             name: e.target.name.value,
             email: e.target.email.value,
@@ -16,13 +16,12 @@ document
                 body: JSON.stringify(formData),
             });
 
-            console.log(response);
+            const data = await response.json(); // On attend que la réponse soit au format JSON
 
             if (response.ok) {
-                alert('Message envoyé avec succès !');
+                alert('Message envoyé avec succès!');
             } else {
-                const errorData = await response.json();
-                console.error(errorData);
+                console.error('Error from server:', data);
                 alert("Erreur lors de l'envoi du message.");
             }
         } catch (error) {
