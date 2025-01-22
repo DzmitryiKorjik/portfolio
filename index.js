@@ -24,7 +24,7 @@ document
 
             if (response.ok) {
                 // Affiche un message de succès
-                statusMessage.textContent = 'Message envoyé avec succès !';
+                statusMessage.textContent = 'Message envoyé avec succès!';
                 statusMessage.style.color = 'green';
 
                 // Réinitialise le formulaire
