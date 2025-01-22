@@ -4,6 +4,8 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
         const { name, email, message } = req.body;
 
+        console.log('Received data:', { name, email, message });
+
         // Vérifier les données du formulaire
         console.log('Form data received:', req.body);
 
