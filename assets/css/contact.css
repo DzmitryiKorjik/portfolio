@@ -6,25 +6,25 @@
     flex-direction: column;
     gap: 5px;
     padding: 0 10px;
-  }
-  
-  .contact-form label {
+}
+
+.contact-form label {
     font-size: 14px;
     font-weight: bold;
     font-family: 'Montserrat';
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
     font-family: 'Montserrat';
-  }
-  
-  .contact-form button {
+}
+
+.contact-form button {
     padding: 10px 20px;
     border: none;
     background-color: #4caf50;
@@ -32,9 +32,14 @@
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .contact-form button:hover {
+}
+
+.contact-form button:hover {
     background-color: #45a049;
-  }
-  
+}
+
+#status-message {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
