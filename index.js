@@ -1,13 +1,17 @@
 document
     .getElementById('contact-form')
     .addEventListener('submit', async (e) => {
-        e.preventDefault(); // Empêcher le rechargement de la page
+        e.preventDefault(); // Empêche le rechargement de la page
 
         const formData = {
             name: e.target.name.value,
             email: e.target.email.value,
             message: e.target.message.value,
         };
+
+        // Sélectionner l'élément pour afficher les messages d'état
+        const statusMessage = document.getElementById('status-message');
+        statusMessage.textContent = ''; // Réinitialiser le message
 
         try {
             const response = await fetch('/api/contact', {
@@ -16,16 +20,27 @@ document
                 body: JSON.stringify(formData),
             });
 
-            const data = await response.json(); // On attend que la réponse soit au format JSON
+            const data = await response.json(); // Attendre que la réponse soit au format JSON
 
             if (response.ok) {
-                alert('Message envoyé avec succès!');
+                // Affiche un message de succès
+                statusMessage.textContent = 'Message envoyé avec succès !';
+                statusMessage.style.color = 'green';
+
+                // Réinitialise le formulaire
+                e.target.reset();
             } else {
-                console.error('Error from server:', data);
-                alert("Erreur lors de l'envoi du message.");
+                // Affiche un message d'erreur (retour du serveur)
+                console.error('Erreur du serveur:', data);
+                statusMessage.textContent =
+                    "Erreur lors de l'envoi du message.";
+                statusMessage.style.color = 'red';
             }
         } catch (error) {
-            console.error('Erreur réseau :', error);
-            alert("Erreur lors de l'envoi du message.");
+            // Affiche un message d'erreur réseau
+            console.error('Erreur réseau :', error);
+            statusMessage.textContent =
+                "Erreur réseau lors de l'envoi du message.";
+            statusMessage.style.color = 'red';
         }
     });
