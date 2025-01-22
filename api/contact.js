@@ -11,9 +11,9 @@ export default async function handler(req, res) {
 
         // Nodemailer configuration
         const transporter = nodemailer.createTransport({
-            host: 'smtp.yandex.com',
-            port: 587,
-            secure: false,
+            host: 'smtp.yandex.com', // SMTP-server Yandex
+            port: 465, // 587 Port TLS
+            secure: true, // false
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
@@ -24,7 +24,7 @@ export default async function handler(req, res) {
             // Envoi de l'email
             await transporter.sendMail({
                 from: `"${name}" <${email}>`,
-                to: 'dmardovitch@gmail.com',
+                to: 'dzmitryi@yandex.com',
                 subject: 'Nouveau message du site',
                 text: message,
             });
