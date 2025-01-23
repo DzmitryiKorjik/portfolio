@@ -29,6 +29,7 @@ header {
                     background-color: var(--background-color);
                     padding: 0 5px;
                     border-radius: 5px;
+                    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
                     &:hover {
                         color: var(--dark-color);
                         box-shadow: var(--shadow-lg);
@@ -39,8 +40,7 @@ header {
                 }
             }
         }
-
-    } 
+    }
 }
 
 .container {
@@ -83,9 +83,10 @@ header {
             font-weight: 800;
             text-transform: none;
             margin-bottom: 45px;
+            text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
         }
         .about__items-descr {
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
             font-weight: 500;
             max-width: 450px;
             margin-bottom: 45px;
@@ -96,7 +97,6 @@ header {
             a {
                 margin-right: 15px;
             }
-            
         }
     }
 }
