@@ -35,7 +35,7 @@ export default async function handler(req, res) {
 
         // Configuration de Nodemailer pour utiliser le serveur SMTP de Yandex
         const transporter = nodemailer.createTransport({
-            host: 'smtp.yandex.com', // Serveur SMTP
+            host: 'smtp.gmail.com', // Serveur SMTP
             port: 587, // Port pour le protocole TLS
             secure: false, // `false` pour le port 587, `true` pour le port 465
             auth: {
@@ -48,7 +48,7 @@ export default async function handler(req, res) {
             // Envoi de l'email avec les informations fournies
             const info = await transporter.sendMail({
                 from: `"${name}" <${email}>`, // Expéditeur
-                to: 'dzmitryi@yandex.com', // Destinataire
+                to: 'dzmitryimardovitch@gmail.com', // Destinataire
                 subject: 'Nouveau message du site', // Sujet du message
                 text: message, // Contenu en texte brut
             });
