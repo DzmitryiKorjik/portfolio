@@ -21,7 +21,8 @@ document
             });
 
             const data = await response.json(); // Attendre que la réponse soit au format JSON
-
+            console.log('Response:', data); // Log de la réponse
+            
             if (response.ok) {
                 // Affiche un message de succès
                 statusMessage.textContent = 'Message envoyé avec succès!';

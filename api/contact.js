@@ -35,19 +35,22 @@ export default async function handler(req, res) {
 
         // Configuration de Nodemailer pour utiliser le serveur SMTP de Yandex
         const transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com', // Serveur SMTP
-            port: 587, // Port pour le protocole TLS
-            secure: false, // `false` pour le port 587, `true` pour le port 465
+            // host: 'smtp.gmail.com', // Serveur SMTP
+            // port: 587, // Port pour le protocole TLS
+            // secure: false, // `false` pour le port 587, `true` pour le port 465
+            service: 'gmail',
             auth: {
                 user: process.env.EMAIL_USER, // Nom d'utilisateur (provenant des variables d'environnement)
                 pass: process.env.EMAIL_PASS, // Mot de passe (provenant des variables d'environnement)
             },
+            debug: true, // Ajout pour le débogage
+            logger: true, // Enregistre les logs dans la console
         });
 
         try {
             // Envoi de l'email avec les informations fournies
             const info = await transporter.sendMail({
-                from: `"${name}" <${email}>`, // Expéditeur
+                from: `${name} <${process.env.EMAIL_USER}>`, // Utilisez votre propre email
                 to: 'dzmitryimardovitch@gmail.com', // Destinataire
                 subject: 'Nouveau message du site', // Sujet du message
                 text: message, // Contenu en texte brut
@@ -61,7 +64,9 @@ export default async function handler(req, res) {
         } catch (error) {
             // Affiche l'erreur dans la console
             console.error('Error during sending message:', error);
-
+            res.status(500).json({
+                error: `Erreur serveur: ${error.message}`,
+            });
             // Vérifie si une réponse spécifique est fournie par le serveur SMTP
             if (error.response && error.response.body) {
                 res.status(500).json({
