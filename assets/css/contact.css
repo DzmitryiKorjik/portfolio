@@ -43,3 +43,15 @@
     justify-content: center;
     font-size: 1rem;
 }
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    a {
+        margin-right: 20px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
