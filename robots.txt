@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://dzmitryi-dev.vercel.app/sitemap.xml
