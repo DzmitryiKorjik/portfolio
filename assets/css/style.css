@@ -26,16 +26,22 @@ header {
                     color: var(--dark-color);
                     text-decoration: none;
                     transition: var(--transition-duration);
-                    background-color: var(--background-color);
-                    padding: 0 5px;
-                    border-radius: 5px;
-                    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+                    /* Glassmorphism start */
+                    background: rgba(255, 255, 255, 0.25);
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    /* Glassmorphism end */
+                    padding: 5px 15px;
+                    border-radius: 12px;
+                    text-shadow: none; 
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
                     &:hover {
+                        background: rgba(255, 255, 255, 0.5);
+                        transform: translateY(-2px);
+                        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
                         color: var(--dark-color);
-                        box-shadow: var(--shadow-lg);
-                        padding: 5px;
-                        border: none;
-                        border-radius: 10px;
                     }
                 }
             }

@@ -47,18 +47,26 @@
             font-weight: 600;
             transition: background-color 0.3s ease;
             button {
-                padding: 12px 20px;
-                border: 1px solid var(--text-muted);
-                border-radius: 5px;
+                padding: 12px 24px;
+                /* Glassmorphism */
+                background: rgba(255, 255, 255, 0.25);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                
+                border-radius: 12px;
                 cursor: pointer;
-                background-color: var(--text-color);
-                color: var(--text-light);
-                transition: background-color 0.3s ease;
+                color: var(--dark-color);
+                font-size: 16px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
                 &:hover {
-                    background-color: var(--text-light);
-                    color: var(--text-color);
-                    box-shadow: var(--shadow-lg);
-                    transform: scaleY(1.01) scaleX(1.01);
+                    background: rgba(255, 255, 255, 0.5);
+                    color: var(--dark-color);
+                    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-2px);
                 }
             }
         }
