@@ -10,17 +10,55 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Mise en évidence du lien actif dans le menu
+  const currentPath = window.location.pathname;
+  document.querySelectorAll(".menu-item a").forEach(link => {
+    const linkPath = new URL(link.href).pathname;
+    if (linkPath === currentPath || (currentPath === "/" && linkPath === "/")) {
+      link.classList.add("active");
+    }
+  });
+
+  // Filtrage des projets par technologie
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  if (filterBtns.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        document.querySelectorAll('.card-wrap').forEach(card => {
+          const tech = card.getAttribute('data-tech') || '';
+          if (filter === 'all' || tech.includes(filter)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
   // Gestion des cartes
   const cards = document.querySelectorAll('.card-wrap');
 
   cards.forEach(cardWrap => {
     const cardBg = cardWrap.querySelector('.card-bg');
     const dataImage = cardWrap.getAttribute('data-image');
-    
+
     // On vérifie si l'image est définie et on applique l'image de fond
     if (dataImage) {
       cardBg.style.backgroundImage = `url(${dataImage})`;
     }
+
+    // Toute la carte est cliquable — ouvre le lien
+    cardWrap.addEventListener('click', () => {
+      const link = cardWrap.querySelector('.github-link');
+      if (link) {
+        window.open(link.href, '_blank', 'noopener,noreferrer');
+      }
+    });
 
     // Fonction pour le mouvement de la souris (pour les appareils de bureau avec souris)
     const onMouseMove = (e) => {

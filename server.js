@@ -27,10 +27,14 @@ app.post('/api/contact', async (req, res) => {
     }
 });
 
-// Serve index.html for the root route (optional, express.static handles this mostly, but good for clarity)
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
+// Clean URLs (without .html extension)
+app.get('/', (_req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+app.get('/about', (_req, res) => res.sendFile(path.join(__dirname, 'about.html')));
+app.get('/projects', (_req, res) => res.sendFile(path.join(__dirname, 'project.html')));
+app.get('/contact', (_req, res) => res.sendFile(path.join(__dirname, 'contact.html')));
+
+// 404 handler
+app.use((_req, res) => res.status(404).sendFile(path.join(__dirname, '404.html')));
 
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);

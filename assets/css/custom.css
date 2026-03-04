@@ -1,27 +1,43 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    background: linear-gradient(-45deg, var(--background-color), var(--pastel-blue), var(--pastel-purple), var(--pastel-green));
+    background: linear-gradient(-45deg, #dff0fb, #e4dcf5, #d4eee5, #fde8d8);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    animation: gradientBG 20s ease infinite;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-size: 15px;
-    line-height: 30px;
-    letter-spacing: 0px;
-    word-wrap: break-word;
+    line-height: 1.7;
     min-height: 100vh;
+    color: var(--text-color);
+    overflow-x: hidden;
 }
 
 @keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ── Glassmorphism card helper ── */
+.glass-card {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Fade-in animation ── */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease forwards;
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+        <title>Page introuvable | Portfolio de Dzmitryi MARDOVITCH</title>
+        <style>
+            .error-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 80vh;
+                text-align: center;
+                gap: 20px;
+            }
+            .error-code {
+                font-family: 'DMSerifText-Regular', serif;
+                font-size: 120px;
+                font-weight: 800;
+                background: var(--gradient-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                line-height: 1;
+                text-shadow: none;
+            }
+            .error-title {
+                font-family: 'DMSerifText-Regular', serif;
+                font-size: 32px;
+                color: var(--dark-color);
+            }
+            .error-desc {
+                font-family: 'Montserrat', sans-serif;
+                color: var(--text-muted);
+                max-width: 400px;
+            }
+            .error-btn {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                text-decoration: none;
+                color: var(--dark-color);
+                background: rgba(255, 255, 255, 0.25);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 12px 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: var(--transition-duration);
+            }
+            .error-btn:hover {
+                background: rgba(255, 255, 255, 0.5);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav id="nav">
+                <img id="menu-toggle" src="./assets/icons/menu.svg" alt="Menu burger" />
+                <ul class="menu hidden">
+                    <li class="menu-item"><a href="/">Accueil</a></li>
+                    <li class="menu-item"><a href="/about">A propos de moi</a></li>
+                    <li class="menu-item"><a href="/projects">Projets</a></li>
+                    <li class="menu-item"><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            <section class="error-section">
+                <div class="error-code">404</div>
+                <h1 class="error-title">Page introuvable</h1>
+                <p class="error-desc">
+                    La page que vous recherchez n'existe pas ou a été déplacée.
+                </p>
+                <a href="/" class="error-btn">← Retour à l'accueil</a>
+            </section>
+        </main>
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,31 +1,43 @@
-body {
-    margin: 10px 0;
-    font-family: 'Raleway';
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 40px 40px 0;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.filter-btn {
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    font-weight: 500;
-
-    -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--dark-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
 }
 
-.title {
-    font-family: 'Raleway';
-    font-size: 24px;
-    font-weight: 700;
-    color: #5d4037;
-    text-align: center;
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
 }
 
-p {
-    line-height: 1.5em;
+.filter-btn.active {
+    background: var(--gradient-primary);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
 
-h1 + p,
-p + p {
-    margin-top: 10px;
-}
-
-.container {
-    padding: 40px 80px;
+#app {
+    padding: 32px 40px 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -116,8 +128,8 @@ p + p {
 }
 
 .card-info * {
-    /* position: relative; */
-    z-index: 1;
+    position: relative;
+    z-index: 2;
 }
 
 .card-info:after {
