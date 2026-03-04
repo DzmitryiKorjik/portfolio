@@ -1,22 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Contactez Dzmitryi Mardovitch, développeur web full stack disponible pour des projets freelance ou des opportunités d'emploi." />
+        <meta
+            name="description"
+            content="Contactez Dzmitryi Mardovitch, développeur web full stack disponible pour des projets freelance ou des opportunités d'emploi."
+        />
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="./assets/icons/favicon.svg"
+        />
         <title>Contact | Dzmitryi MARDOVITCH — Développeur Web</title>
         <!-- Open Graph -->
-        <meta property="og:title" content="Contactez Dzmitryi MARDOVITCH — Développeur Web" />
-        <meta property="og:description" content="Disponible pour des projets freelance ou des opportunités en CDI/CDD. Envoyez-moi un message !" />
+        <meta
+            property="og:title"
+            content="Contactez Dzmitryi MARDOVITCH — Développeur Web"
+        />
+        <meta
+            property="og:description"
+            content="Disponible pour des projets freelance ou des opportunités en CDI/CDD. Envoyez-moi un message !"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fr_FR" />
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KR2GL9ZE47"></script>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-KR2GL9ZE47"
+        ></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
             gtag('js', new Date());
             gtag('config', 'G-KR2GL9ZE47');
         </script>
@@ -24,10 +42,16 @@
     <body>
         <header>
             <nav id="nav">
-                <img id="menu-toggle" src="./assets/icons/menu.svg" alt="Menu burger" />
+                <img
+                    id="menu-toggle"
+                    src="./assets/icons/menu.svg"
+                    alt="Menu burger"
+                />
                 <ul class="menu hidden">
                     <li class="menu-item"><a href="/">Accueil</a></li>
-                    <li class="menu-item"><a href="/about">A propos de moi</a></li>
+                    <li class="menu-item">
+                        <a href="/about">A propos de moi</a>
+                    </li>
                     <li class="menu-item"><a href="/projects">Projets</a></li>
                     <li class="menu-item"><a href="/contact">Contact</a></li>
                 </ul>
@@ -36,79 +60,148 @@
 
         <main>
             <div class="container">
-            <div class="contact__section">
+                <div class="contact__section">
+                    <!-- ── Left: contact info ── -->
+                    <div class="contact__info">
+                        <div>
+                            <span class="contact__info-label">Contact</span>
+                            <h1 class="contact__info-title">
+                                Travaillons<br />ensemble
+                            </h1>
+                        </div>
+                        <p class="contact__info-text">
+                            Disponible pour des missions freelance, des projets
+                            en CDI/CDD ou des collaborations à distance.
+                            N'hésitez pas à me contacter !
+                        </p>
 
-                <!-- ── Left: contact info ── -->
-                <div class="contact__info">
-                    <div>
-                        <span class="contact__info-label">Contact</span>
-                        <h1 class="contact__info-title">Travaillons<br />ensemble</h1>
+                        <div class="contact__cards">
+                            <a
+                                href="mailto:dzmitryimardovitch@gmail.com"
+                                class="contact__card"
+                            >
+                                <div class="contact__card-icon">✉️</div>
+                                <div class="contact__card-body">
+                                    <span class="contact__card-label"
+                                        >Email</span
+                                    >
+                                    <span class="contact__card-value"
+                                        >dzmitryimardovitch@gmail.com</span
+                                    >
+                                </div>
+                            </a>
+                            <a
+                                href="https://github.com/DzmitryiKorjik"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact__card"
+                            >
+                                <div class="contact__card-icon">
+                                    <img
+                                        src="./assets/icons/github.svg"
+                                        alt="GitHub"
+                                        style="width: 22px; height: 22px"
+                                    />
+                                </div>
+                                <div class="contact__card-body">
+                                    <span class="contact__card-label"
+                                        >GitHub</span
+                                    >
+                                    <span class="contact__card-value"
+                                        >DzmitryiKorjik</span
+                                    >
+                                </div>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/dzmitryi-mardovitch/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact__card"
+                            >
+                                <div class="contact__card-icon">
+                                    <img
+                                        src="./assets/icons/linkedin.svg"
+                                        alt="LinkedIn"
+                                        style="width: 22px; height: 22px"
+                                    />
+                                </div>
+                                <div class="contact__card-body">
+                                    <span class="contact__card-label"
+                                        >LinkedIn</span
+                                    >
+                                    <span class="contact__card-value"
+                                        >Dzmitryi Mardovitch</span
+                                    >
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <p class="contact__info-text">
-                        Disponible pour des missions freelance, des projets en CDI/CDD ou des collaborations à distance. N'hésitez pas à me contacter !
-                    </p>
 
-                    <div class="contact__cards">
-                        <a href="mailto:dzmitryimardovitch@gmail.com" class="contact__card">
-                            <div class="contact__card-icon">✉️</div>
-                            <div class="contact__card-body">
-                                <span class="contact__card-label">Email</span>
-                                <span class="contact__card-value">dzmitryimardovitch@gmail.com</span>
+                    <!-- ── Right: form ── -->
+                    <div class="contact__form-wrapper">
+                        <form
+                            id="contact-form"
+                            action="/api/contact"
+                            method="post"
+                            class="contact-form"
+                        >
+                            <div class="contact-form__group">
+                                <label for="name">Nom</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Votre nom complet"
+                                    required
+                                />
                             </div>
-                        </a>
-                        <a href="https://github.com/DzmitryiKorjik" target="_blank" rel="noopener noreferrer" class="contact__card">
-                            <div class="contact__card-icon">
-                                <img src="./assets/icons/github.svg" alt="GitHub" style="width:22px;height:22px;" />
+                            <div class="contact-form__group">
+                                <label for="email">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="votre@email.com"
+                                    required
+                                />
                             </div>
-                            <div class="contact__card-body">
-                                <span class="contact__card-label">GitHub</span>
-                                <span class="contact__card-value">DzmitryiKorjik</span>
+                            <div class="contact-form__group">
+                                <label for="message">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    placeholder="Décrivez votre projet ou votre besoin..."
+                                    required
+                                ></textarea>
                             </div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/dzmitryi-mardovitch/" target="_blank" rel="noopener noreferrer" class="contact__card">
-                            <div class="contact__card-icon">
-                                <img src="./assets/icons/linkedin.svg" alt="LinkedIn" style="width:22px;height:22px;" />
-                            </div>
-                            <div class="contact__card-body">
-                                <span class="contact__card-label">LinkedIn</span>
-                                <span class="contact__card-value">Dzmitryi Mardovitch</span>
-                            </div>
-                        </a>
+                            <button type="submit">Envoyer le message →</button>
+                        </form>
+                        <p id="status-message"></p>
                     </div>
                 </div>
-
-                <!-- ── Right: form ── -->
-                <div class="contact__form-wrapper">
-                    <form id="contact-form" action="/api/contact" method="post" class="contact-form">
-                        <div class="contact-form__group">
-                            <label for="name">Nom</label>
-                            <input type="text" id="name" name="name" placeholder="Votre nom complet" required />
-                        </div>
-                        <div class="contact-form__group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="votre@email.com" required />
-                        </div>
-                        <div class="contact-form__group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre besoin..." required></textarea>
-                        </div>
-                        <button type="submit">Envoyer le message →</button>
-                    </form>
-                    <p id="status-message"></p>
-                </div>
-
-            </div>
             </div>
         </main>
 
         <footer>
-            <a href="https://github.com/DzmitryiKorjik" target="_blank" rel="noopener noreferrer">
+            <a
+                href="https://github.com/DzmitryiKorjik"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 <img src="./assets/icons/github.svg" alt="Github" />
             </a>
-            <a href="mailto:dzmitryimardovitch@gmail.com" rel="noopener noreferrer" aria-label="Email">
+            <a
+                href="mailto:dzmitryimardovitch@gmail.com"
+                rel="noopener noreferrer"
+                aria-label="Email"
+            >
                 <img src="./assets/icons/email.svg" alt="Email" />
             </a>
-            <a href="https://www.linkedin.com/in/dzmitryi-mardovitch/" target="_blank" rel="noopener noreferrer">
+            <a
+                href="https://www.linkedin.com/in/dzmitryi-mardovitch/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 <img src="./assets/icons/linkedin.svg" alt="LinkedIn" />
             </a>
         </footer>

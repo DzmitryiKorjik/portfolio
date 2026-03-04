@@ -1,23 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="À propos de Dzmitryi Mardovitch — développeur web full stack avec 10 ans d'expérience en gestion. Compétences React, Node.js, Python, PHP, Azure." />
+        <meta
+            name="description"
+            content="À propos de Dzmitryi Mardovitch — développeur web full stack avec 10 ans d'expérience en gestion. Compétences React, Node.js, Python, PHP, Azure."
+        />
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="./assets/icons/favicon.svg"
+        />
         <title>À propos | Dzmitryi MARDOVITCH — Développeur Web</title>
         <!-- Open Graph -->
-        <meta property="og:title" content="À propos de Dzmitryi MARDOVITCH — Développeur Web Full Stack" />
-        <meta property="og:description" content="Parcours, compétences techniques et linguistiques de Dzmitryi Mardovitch, développeur web passionné." />
+        <meta
+            property="og:title"
+            content="À propos de Dzmitryi MARDOVITCH — Développeur Web Full Stack"
+        />
+        <meta
+            property="og:description"
+            content="Parcours, compétences techniques et linguistiques de Dzmitryi Mardovitch, développeur web passionné."
+        />
         <meta property="og:image" content="./assets/img/about.JPG" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fr_FR" />
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KR2GL9ZE47"></script>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-KR2GL9ZE47"
+        ></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
             gtag('js', new Date());
             gtag('config', 'G-KR2GL9ZE47');
         </script>
@@ -25,10 +43,16 @@
     <body>
         <header id="about">
             <nav id="nav">
-                <img id="menu-toggle" src="./assets/icons/menu.svg" alt="Menu burger" />
+                <img
+                    id="menu-toggle"
+                    src="./assets/icons/menu.svg"
+                    alt="Menu burger"
+                />
                 <ul class="menu hidden">
                     <li class="menu-item"><a href="/">Accueil</a></li>
-                    <li class="menu-item"><a href="/about">A propos de moi</a></li>
+                    <li class="menu-item">
+                        <a href="/about">A propos de moi</a>
+                    </li>
                     <li class="menu-item"><a href="/projects">Projets</a></li>
                     <li class="menu-item"><a href="/contact">Contact</a></li>
                 </ul>
@@ -38,150 +62,240 @@
         <main>
             <!-- ── Hero ── -->
             <div class="container">
-            <section class="about__section">
-                <div class="about__items-img">
-                    <img src="./assets/img/about.JPG" alt="Photo de Dzmitryi Mardovitch" />
-                </div>
-                <div class="about__content">
-                    <span class="about__items-label">À propos de moi</span>
-                    <h1 class="about__items-title">Dzmitryï MARDOVITCH</h1>
-                    <p class="about__items-descr">
-                        Développeur d'Applications Web &nbsp;·&nbsp; Automatisation &amp; Optimisation des Processus
-                    </p>
-                    <p class="about__items-text">
-                        Bonjour et bienvenue dans mon portfolio ! Je m'appelle Dzmitryï et je suis un développeur web passionné, spécialisé dans la création de solutions numériques efficaces. Après plus de 10 ans d'expérience en gestion et en ressources humaines dans l'armée, j'ai entrepris une reconversion vers le développement web, un domaine où je peux combiner rigueur, logique et créativité.
-                    </p>
-                    <p class="about__items-text">
-                        Grâce à une formation approfondie et à de nombreux projets personnels, je maîtrise les langages et outils suivants : HTML, CSS, JavaScript (React, jQuery), PHP, Python (Django, Pandas), SQL, WordPress, ainsi que des solutions cloud comme Azure Functions, Power Automate et Power Apps.
-                    </p>
-                    <p class="about__items-text">
-                        Curieux, rigoureux et toujours prêt à apprendre, je suis motivé par les défis techniques et les projets concrets. Explorez mes réalisations et n'hésitez pas à me contacter pour toute collaboration ou opportunité !
-                    </p>
-                    <div class="about__items-download">
-                        <a href="./assets/docs/CV_Dzmitryi_MARDOVITCH.pdf" download>
-                            <button type="button">⬇ Télécharger le CV</button>
-                        </a>
+                <section class="about__section">
+                    <div class="about__items-img">
+                        <img
+                            src="./assets/img/about.JPG"
+                            alt="Photo de Dzmitryi Mardovitch"
+                        />
                     </div>
-                </div>
-            </section>
+                    <div class="about__content">
+                        <span class="about__items-label">À propos de moi</span>
+                        <h1 class="about__items-title">Dzmitryï MARDOVITCH</h1>
+                        <p class="about__items-descr">
+                            Développeur d'Applications Web &nbsp;·&nbsp;
+                            Automatisation &amp; Optimisation des Processus
+                        </p>
+                        <p class="about__items-text">
+                            Bonjour et bienvenue dans mon portfolio ! Je
+                            m'appelle Dzmitryï et je suis un développeur web
+                            passionné, spécialisé dans la création de solutions
+                            numériques efficaces. Après plus de 10 ans
+                            d'expérience en gestion et en ressources humaines
+                            dans l'armée, j'ai entrepris une reconversion vers
+                            le développement web, un domaine où je peux combiner
+                            rigueur, logique et créativité.
+                        </p>
+                        <p class="about__items-text">
+                            Grâce à une formation approfondie et à de nombreux
+                            projets personnels, je maîtrise les langages et
+                            outils suivants : HTML, CSS, JavaScript (React,
+                            jQuery), PHP, Python (Django, Pandas), SQL,
+                            WordPress, ainsi que des solutions cloud comme Azure
+                            Functions, Power Automate et Power Apps.
+                        </p>
+                        <p class="about__items-text">
+                            Curieux, rigoureux et toujours prêt à apprendre, je
+                            suis motivé par les défis techniques et les projets
+                            concrets. Explorez mes réalisations et n'hésitez pas
+                            à me contacter pour toute collaboration ou
+                            opportunité !
+                        </p>
+                        <div class="about__items-download">
+                            <a
+                                href="./assets/docs/CV_Dzmitryi_MARDOVITCH.pdf"
+                                download
+                            >
+                                <button type="button">
+                                    ⬇ Télécharger le CV
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </div>
 
             <!-- ── Skills ── -->
             <div class="container">
-            <section class="skills__section">
-                <div class="skills__grid">
+                <section class="skills__section">
+                    <div class="skills__grid">
+                        <!-- Frontend -->
+                        <div class="skills__card">
+                            <span class="skills__card-icon">🎨</span>
+                            <h2 class="skills__card-title">Frontend</h2>
+                            <ul class="skills__badges">
+                                <li class="skills__badge">HTML5</li>
+                                <li class="skills__badge">CSS3</li>
+                                <li class="skills__badge">JavaScript ES6+</li>
+                                <li class="skills__badge">React</li>
+                                <li class="skills__badge">Redux</li>
+                                <li class="skills__badge">jQuery</li>
+                                <li class="skills__badge">Bootstrap</li>
+                            </ul>
+                        </div>
 
-                    <!-- Frontend -->
-                    <div class="skills__card">
-                        <span class="skills__card-icon">🎨</span>
-                        <h2 class="skills__card-title">Frontend</h2>
-                        <ul class="skills__badges">
-                            <li class="skills__badge">HTML5</li>
-                            <li class="skills__badge">CSS3</li>
-                            <li class="skills__badge">JavaScript ES6+</li>
-                            <li class="skills__badge">React</li>
-                            <li class="skills__badge">Redux</li>
-                            <li class="skills__badge">jQuery</li>
-                            <li class="skills__badge">Bootstrap</li>
-                        </ul>
+                        <!-- Backend -->
+                        <div class="skills__card">
+                            <span class="skills__card-icon">⚙️</span>
+                            <h2 class="skills__card-title">Backend</h2>
+                            <ul class="skills__badges">
+                                <li class="skills__badge skills__badge--green">
+                                    Node.js
+                                </li>
+                                <li class="skills__badge skills__badge--green">
+                                    Express.js
+                                </li>
+                                <li class="skills__badge skills__badge--green">
+                                    Python
+                                </li>
+                                <li class="skills__badge skills__badge--green">
+                                    Django
+                                </li>
+                                <li class="skills__badge skills__badge--green">
+                                    FastAPI
+                                </li>
+                                <li class="skills__badge skills__badge--green">
+                                    PHP
+                                </li>
+                                <li class="skills__badge skills__badge--green">
+                                    SQL
+                                </li>
+                                <li class="skills__badge skills__badge--green">
+                                    MongoDB
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Outils & Cloud -->
+                        <div class="skills__card">
+                            <span class="skills__card-icon">☁️</span>
+                            <h2 class="skills__card-title">
+                                Outils &amp; Cloud
+                            </h2>
+                            <ul class="skills__badges">
+                                <li class="skills__badge skills__badge--purple">
+                                    Git
+                                </li>
+                                <li class="skills__badge skills__badge--purple">
+                                    Linux
+                                </li>
+                                <li class="skills__badge skills__badge--purple">
+                                    Azure Functions
+                                </li>
+                                <li class="skills__badge skills__badge--purple">
+                                    Power Automate
+                                </li>
+                                <li class="skills__badge skills__badge--purple">
+                                    Power Apps
+                                </li>
+                                <li class="skills__badge skills__badge--purple">
+                                    Webpack
+                                </li>
+                                <li class="skills__badge skills__badge--purple">
+                                    WordPress
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Soft skills -->
+                        <div class="skills__card">
+                            <span class="skills__card-icon">🧠</span>
+                            <h2 class="skills__card-title">
+                                Compétences professionnelles
+                            </h2>
+                            <ul class="skills__list">
+                                <li>Développement web fullstack</li>
+                                <li>Automatisation de processus</li>
+                                <li>Méthodologie Agile &amp; UML</li>
+                                <li>
+                                    Gestion du temps &amp; respect des délais
+                                </li>
+                                <li>Communication &amp; travail en équipe</li>
+                                <li>Adaptabilité &amp; apprentissage rapide</li>
+                            </ul>
+                        </div>
+
+                        <!-- Langues -->
+                        <div class="skills__card">
+                            <span class="skills__card-icon">🌍</span>
+                            <h2 class="skills__card-title">Langues</h2>
+                            <ul class="lang__list">
+                                <li class="lang__item">
+                                    <div class="lang__header">
+                                        <span class="lang__name"
+                                            >🇫🇷 Français</span
+                                        >
+                                        <span class="lang__level"
+                                            >Courant — 85%</span
+                                        >
+                                    </div>
+                                    <div class="lang__bar-bg">
+                                        <div
+                                            class="lang__bar-fill"
+                                            style="width: 85%"
+                                        ></div>
+                                    </div>
+                                </li>
+                                <li class="lang__item">
+                                    <div class="lang__header">
+                                        <span class="lang__name"
+                                            >🇬🇧 Anglais</span
+                                        >
+                                        <span class="lang__level"
+                                            >Conversation — 60%</span
+                                        >
+                                    </div>
+                                    <div class="lang__bar-bg">
+                                        <div
+                                            class="lang__bar-fill"
+                                            style="width: 60%"
+                                        ></div>
+                                    </div>
+                                </li>
+                                <li class="lang__item">
+                                    <div class="lang__header">
+                                        <span class="lang__name">🇷🇺 Russe</span>
+                                        <span class="lang__level"
+                                            >Langue maternelle — 100%</span
+                                        >
+                                    </div>
+                                    <div class="lang__bar-bg">
+                                        <div
+                                            class="lang__bar-fill"
+                                            style="width: 100%"
+                                        ></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Intérêts -->
+                        <div class="skills__card">
+                            <span class="skills__card-icon">🚀</span>
+                            <h2 class="skills__card-title">Intérêts</h2>
+                            <ul class="skills__badges">
+                                <li class="skills__badge skills__badge--orange">
+                                    Full Stack Web
+                                </li>
+                                <li class="skills__badge skills__badge--orange">
+                                    Automatisation
+                                </li>
+                                <li class="skills__badge skills__badge--orange">
+                                    Cybersécurité
+                                </li>
+                                <li class="skills__badge skills__badge--orange">
+                                    Linux
+                                </li>
+                                <li class="skills__badge skills__badge--orange">
+                                    Scripts Python
+                                </li>
+                                <li class="skills__badge skills__badge--orange">
+                                    Veille tech
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <!-- Backend -->
-                    <div class="skills__card">
-                        <span class="skills__card-icon">⚙️</span>
-                        <h2 class="skills__card-title">Backend</h2>
-                        <ul class="skills__badges">
-                            <li class="skills__badge skills__badge--green">Node.js</li>
-                            <li class="skills__badge skills__badge--green">Express.js</li>
-                            <li class="skills__badge skills__badge--green">Python</li>
-                            <li class="skills__badge skills__badge--green">Django</li>
-                            <li class="skills__badge skills__badge--green">FastAPI</li>
-                            <li class="skills__badge skills__badge--green">PHP</li>
-                            <li class="skills__badge skills__badge--green">SQL</li>
-                            <li class="skills__badge skills__badge--green">MongoDB</li>
-                        </ul>
-                    </div>
-
-                    <!-- Outils & Cloud -->
-                    <div class="skills__card">
-                        <span class="skills__card-icon">☁️</span>
-                        <h2 class="skills__card-title">Outils &amp; Cloud</h2>
-                        <ul class="skills__badges">
-                            <li class="skills__badge skills__badge--purple">Git</li>
-                            <li class="skills__badge skills__badge--purple">Linux</li>
-                            <li class="skills__badge skills__badge--purple">Azure Functions</li>
-                            <li class="skills__badge skills__badge--purple">Power Automate</li>
-                            <li class="skills__badge skills__badge--purple">Power Apps</li>
-                            <li class="skills__badge skills__badge--purple">Webpack</li>
-                            <li class="skills__badge skills__badge--purple">WordPress</li>
-                        </ul>
-                    </div>
-
-                    <!-- Soft skills -->
-                    <div class="skills__card">
-                        <span class="skills__card-icon">🧠</span>
-                        <h2 class="skills__card-title">Compétences professionnelles</h2>
-                        <ul class="skills__list">
-                            <li>Développement web fullstack</li>
-                            <li>Automatisation de processus</li>
-                            <li>Méthodologie Agile &amp; UML</li>
-                            <li>Gestion du temps &amp; respect des délais</li>
-                            <li>Communication &amp; travail en équipe</li>
-                            <li>Adaptabilité &amp; apprentissage rapide</li>
-                        </ul>
-                    </div>
-
-                    <!-- Langues -->
-                    <div class="skills__card">
-                        <span class="skills__card-icon">🌍</span>
-                        <h2 class="skills__card-title">Langues</h2>
-                        <ul class="lang__list">
-                            <li class="lang__item">
-                                <div class="lang__header">
-                                    <span class="lang__name">🇫🇷 Français</span>
-                                    <span class="lang__level">Courant — 80%</span>
-                                </div>
-                                <div class="lang__bar-bg">
-                                    <div class="lang__bar-fill" style="width: 80%"></div>
-                                </div>
-                            </li>
-                            <li class="lang__item">
-                                <div class="lang__header">
-                                    <span class="lang__name">🇬🇧 Anglais</span>
-                                    <span class="lang__level">Conversation — 60%</span>
-                                </div>
-                                <div class="lang__bar-bg">
-                                    <div class="lang__bar-fill" style="width: 60%"></div>
-                                </div>
-                            </li>
-                            <li class="lang__item">
-                                <div class="lang__header">
-                                    <span class="lang__name">🇷🇺 Russe</span>
-                                    <span class="lang__level">Langue maternelle — 100%</span>
-                                </div>
-                                <div class="lang__bar-bg">
-                                    <div class="lang__bar-fill" style="width: 100%"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Intérêts -->
-                    <div class="skills__card">
-                        <span class="skills__card-icon">🚀</span>
-                        <h2 class="skills__card-title">Intérêts</h2>
-                        <ul class="skills__badges">
-                            <li class="skills__badge skills__badge--orange">Full Stack Web</li>
-                            <li class="skills__badge skills__badge--orange">Automatisation</li>
-                            <li class="skills__badge skills__badge--orange">Cybersécurité</li>
-                            <li class="skills__badge skills__badge--orange">Linux</li>
-                            <li class="skills__badge skills__badge--orange">Scripts Python</li>
-                            <li class="skills__badge skills__badge--orange">Veille tech</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </section>
+                </section>
             </div>
         </main>
 
